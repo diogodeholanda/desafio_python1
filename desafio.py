@@ -30,6 +30,7 @@ while True:
     elif opcao == "s":
         if numero_saques >= LIMITE_SAQUES:
             print("Operação falhou! O limite de saques foi excedido.")
+            break
 
         if valor > saldo:
             print("Operação falou! Saldo insuficiente.")
@@ -37,7 +38,7 @@ while True:
         elif valor > limite:
             print("Operação falou! Limite excedido.")
 
-        elif valor > 0:
+        elif valor > 0 and numero_saques < LIMITE_SAQUES:
             valor = float(input("Informe o valor do saque: "))
             saldo -= valor
             extrato += f"Saque: R$ {valor:.2f}\n"
