@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, time
 
 data = date(2023, 1, 1)# se quiser exibir a data de hoje uso date.today()
 mascara_ptbr = '%d/%m/%Y'
@@ -12,3 +12,6 @@ data_hoje = date.today()#imprimi somente a data
 print(data_hoje)
 
 print(datetime.today())#imprimi data e hora
+
+hora = time(11, 1, 0)
+print(hora)
